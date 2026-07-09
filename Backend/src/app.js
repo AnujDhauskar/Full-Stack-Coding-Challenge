@@ -12,7 +12,7 @@ const app = express();
 app.use(helmet());
 app.use(
   cors({
-    origin: true, // or specific frontend origin once established
+    origin: ["http://localhost:5173", "http://localhost:5174"],
     credentials: true,
   })
 );
