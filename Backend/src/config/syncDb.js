@@ -2,10 +2,24 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import bcrypt from "bcryptjs";
+import mysql from "mysql2/promise";
 import { sequelize, User, Store, Rating } from "../models/index.js";
 
 const seedDatabase = async () => {
   try {
+    // First, connect to MySQL server without database to check/create database
+    const connection = await mysql.createConnection({
+      host: process.env.DB_HOST || "localhost",
+      port: process.env.DB_PORT || 3306,
+      user: process.env.DB_USER || "root",
+      password: process.env.DB_PASS || "",
+    });
+
+    const dbName = process.env.DB_NAME || "store_rating_db";
+    await connection.query(`CREATE DATABASE IF NOT EXISTS \`${dbName}\`;`);
+    await connection.end();
+    console.log(`✅ Database '${dbName}' checked/created.`);
+
     // Sync all models (create tables if not exist)
     await sequelize.sync({ alter: true });
     console.log("✅ Database synced successfully.");
@@ -40,3 +54,4 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
+
