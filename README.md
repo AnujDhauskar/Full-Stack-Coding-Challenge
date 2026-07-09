@@ -6,7 +6,11 @@ This project was developed as part of a **Full Stack Developer Coding Challenge*
 
 <img width="970" height="795" alt="image" src="https://github.com/user-attachments/assets/9d590f8d-3ed9-4005-8499-1d924acb567b" />
 
+<img width="670" height="896" alt="image" src="https://github.com/user-attachments/assets/dfaea212-8ee3-4b59-b9f4-1451915ec23b" />
+
+
 <img width="1637" height="723" alt="image" src="https://github.com/user-attachments/assets/a05d176a-7a33-48b9-9fdb-9cbb393a2f6d" />
+
 <img width="1575" height="791" alt="image" src="https://github.com/user-attachments/assets/d3302161-3ffa-4453-861f-8e7cadd74b78" />
 
 
