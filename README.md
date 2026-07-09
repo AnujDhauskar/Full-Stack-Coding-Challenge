@@ -354,6 +354,11 @@ Add screenshots of:
 
 ---
 
+#for login as admin
+*credentials*
+-email : admin@storerating.com
+-password:Admin@123
+
 # 👨‍💻 Author
 
 **Anuj Dhauskar**
