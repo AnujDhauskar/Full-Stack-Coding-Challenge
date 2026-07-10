@@ -44,7 +44,7 @@ app.use("/api/user", userRoutes);
 app.use("/api/owner", storeOwnerRoutes);
 
 // React Router fallback
-app.get("*", (req, res) => {
+app.get("/{*any}", (req, res) => {
   res.sendFile("index.html", { root: "./public" });
 });
 
