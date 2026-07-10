@@ -18,6 +18,7 @@ app.use(
 );
 app.use(express.json());
 app.use(cookieParser());
+app.use(express.static("./public"));
 
 // Test route
 app.get("/", (req, res) => {
@@ -30,4 +31,5 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/owner", storeOwnerRoutes);
 
-export default app;
+
+export default app;
